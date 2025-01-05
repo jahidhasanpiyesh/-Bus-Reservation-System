@@ -1,0 +1,119 @@
+Code Structure:
+	Data Structures:
+		Bus: Represents bus information, including ID, name, route, total/available seats, and departure/arrival times.
+		Passenger: Represents a user's information such as user ID, name, email, and password.
+		Reservation: Represents a reservation with unique ID, bus ID, user ID, seat number, and reservation date.
+		
+		File Handling:
+			The program uses binary files to store buses, users, and reservations (buses.dat, users.dat, reservations.dat).
+			File operations include saving, reading, and updating records.
+
+Authentication:
+	Passengers can log in using their email and password.
+	New passengers can register, creating a unique user_id.
+
+Menus:
+	Main Menu: Provides options for admin login, passenger login, registration, and exiting the program.
+	Admin Menu: Allows admins to add buses and view all bus details.
+	Passenger Menu: Lets passengers view buses, book seats, and view their reservations.
+
+	Unique ID Generation:
+		Functions like generateReservationID and generateUserID ensure unique IDs for reservations and users.
+
+
+Functionalities Explaine-----------------
+	Main Menu
+	Admin Login:
+		Redirects to the Admin Menu.
+		Admin can manage bus data.
+
+	Passenger Login:
+		Passengers authenticate using email and password.
+		Successful login redirects to the Passenger Menu.
+
+	Register as Passenger:
+		Creates a new user and stores the details in users.dat.
+
+	Exit:
+	Terminates the program.
+
+Admin Menu
+	Add Bus:
+		Admin can input bus details (ID, name, route, seats, timings).
+		Data is stored in buses.dat.
+
+	View Buses:
+		Displays all buses and their details.
+
+
+
+Passenger Menu
+View Buses:
+
+	Displays the list of available buses, showing the route, timing, and seat availability.
+Book a Seat:
+	Allows passengers to book a seat on a specific bus by entering:
+		Bus ID
+		Seat number
+		Reservation date
+	A reservation is created and stored in reservations.dat.
+	The number of available seats for the bus is updated in buses.dat.
+
+View My Reservations:
+	Lists all reservations made by the logged-in passenger.
+
+
+Key Functions
+File Handling Functions:
+
+saveBus(): Writes a new bus record to buses.dat.
+saveReservation(): Writes a reservation record to reservations.dat.
+updateBusAvailability(): Modifies the available seats for a specific bus in buses.dat.
+Authentication Functions:
+
+authenticateUser(): Validates user credentials against users.dat.
+registerUser(): Creates a new user and stores their details in users.dat.
+Reservation Management:
+
+bookSeat(): Checks bus availability, creates a reservation, and updates seat availability.
+viewReservations(): Displays reservations for a specific user.
+Utility Functions:
+
+generateReservationID() and generateUserID(): Generate unique IDs for reservations and users.
+isBusAvailable(): Checks if a bus has available seats.
+
+
+Key Functions
+File Handling Functions:
+
+saveBus(): Writes a new bus record to buses.dat.
+saveReservation(): Writes a reservation record to reservations.dat.
+updateBusAvailability(): Modifies the available seats for a specific bus in buses.dat.
+Authentication Functions:
+
+authenticateUser(): Validates user credentials against users.dat.
+registerUser(): Creates a new user and stores their details in users.dat.
+Reservation Management:
+
+bookSeat(): Checks bus availability, creates a reservation, and updates seat availability.
+viewReservations(): Displays reservations for a specific user.
+Utility Functions:
+
+generateReservationID() and generateUserID(): Generate unique IDs for reservations and users.
+isBusAvailable(): Checks if a bus has available seats.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
